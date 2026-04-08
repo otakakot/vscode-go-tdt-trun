@@ -4,6 +4,10 @@
   "description": "Run individual Go table-driven subtests from the editor",
   "version": "0.1.0",
   "publisher": "otakakot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/otakakot/vscode-go-tdt-trun"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
