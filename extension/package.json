@@ -1,0 +1,54 @@
+{
+  "name": "tdtls",
+  "displayName": "TDT Run - Table Driven Test Runner",
+  "description": "Run individual Go table-driven subtests from the editor",
+  "version": "0.1.0",
+  "publisher": "otakakot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/otakakot/vscode-go-tdt-trun"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Testing"
+  ],
+  "activationEvents": [
+    "onLanguage:go"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tdtls.runSubtest",
+        "title": "TDT: Run Subtest"
+      },
+      {
+        "command": "tdtls.debugSubtest",
+        "title": "TDT: Debug Subtest"
+      }
+    ],
+    "configuration": {
+      "title": "TDT",
+      "properties": {
+        "tdtls.cliPath": {
+          "type": "string",
+          "default": "tdtls",
+          "description": "Path to the tdtls CLI binary"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  },
+  "packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be"
+}
